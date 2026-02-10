@@ -1,0 +1,116 @@
+/* 1. Main Layout & Centering */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center; /* Ensures text inside App is centered */
+}
+
+/* 2. Header Styles - Fixes the left-leaning text */
+.header {
+  margin: 20px auto;
+  padding: 20px 40px;
+  border-radius: 15px;
+}
+
+.header h1, .header h3, .header h5 {
+  margin: 10px 0;
+  color: #213547; /* Darker color for light background visibility */
+  margin-bottom: 5px;
+}
+
+/* 3. Card Container & Card Styles */
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 450px;
+  height: 300px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 20px;
+  background-color: rgba(247, 217, 217, 0.9); /* Consistent dark background */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  color: #000; 
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card.start { 
+  background-color: #def881; /* Pure white */
+  border: 1px solid #ddd;
+}
+
+.card.easy { 
+  background-color: #d4edda; /* Light Pastel Green */
+  border: 1px solid #c3e6cb;
+}
+
+.card.medium { 
+  background-color: #fff3cd; /* Light Pastel Yellow/Gold */
+  border: 1px solid #ffeeba;
+}
+
+.card.hard { 
+  background-color: #f8d7da; /* Light Pastel Red */
+  border: 1px solid #f5c6cb;
+}
+
+/* Maintain the dark background only when flipped to the answer (optional) */
+.card.back {
+  background-color: #e2e3e5; /* Light grey for the back */
+}
+
+/* 5. Image Styling */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-image {
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* 6. Navigation Buttons - Side by Side */
+.navigation {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px; /* Space between the back and forward buttons */
+}
+
+.nav-button {
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+  padding: 10px 30px;
+  font-size: 1.5em;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.nav-button:hover {
+  background-color: #333;
+}
+
+.nav-button:active {
+  transform: scale(0.95); /* Slight "click" effect */
+}
